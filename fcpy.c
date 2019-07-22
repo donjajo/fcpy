@@ -28,13 +28,6 @@ struct splits {
 	size_t length;
 };
 
-// void copy() {
-// 	int c;
-// 	while( ( c = fgetc( data.source.file ) ) != EOF ) {
-// 		fputc( c, data.dest.file );
-// 	}
-// }
-
 void init() {
 	if( ( data.source.fd = open( data.source.filename, O_RDONLY ) ) < 0 ) {
 		perror( data.source.filename );
